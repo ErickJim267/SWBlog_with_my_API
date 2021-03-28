@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Characters = () => {
-	return <h1>PERSONAJES</h1>;
+	return <h1 id="charactersTitle">CHARACTERS</h1>;
 };

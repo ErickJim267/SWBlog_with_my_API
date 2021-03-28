@@ -4,5 +4,5 @@ import React from "react";
 // }
 
 export const Planets = () => {
-	return <h1>PLANETAS</h1>;
+	return <h1 id="planetsTitle">PLANETS</h1>;
 };

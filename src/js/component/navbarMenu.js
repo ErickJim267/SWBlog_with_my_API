@@ -12,22 +12,19 @@ export const NavbarMenu = () => {
 				<Link to="/">
 					<Image
 						src="https://logodownload.org/wp-content/uploads/2015/12/star-wars-logo-3-1.png"
-						// width="60"
 						height="40"
 						alt="Star Wars"
 					/>
 				</Link>
 			</Navbar.Brand>
-
 			<Nav className="mr-auto">
 				<Link className="nav-link" to="/planets">
-					Planets
+					<section id="planetlink">Planets</section>
 				</Link>
 				<Link className="nav-link" to="/characters">
-					Personajes
+					<section id="characterlink">Characters</section>
 				</Link>
 			</Nav>
-
 			<DropdownButton id="dropdown-basic-button" title={`Favoritos ${store.favorites.length}`}>
 				{store.favorites.map((item, index) => {
 					return (
@@ -38,16 +35,5 @@ export const NavbarMenu = () => {
 				})}
 			</DropdownButton>
 		</Navbar>
-
-		// <nav className="navbar navbar-light bg-light mb-3">
-		// 	<Link to="/">
-		// 		<span className="navbar-brand mb-0 h1">Home</span>
-		// 	</Link>
-		// 	<div className="ml-auto">
-		// 		<Link to="/demo">
-		// 			<button className="btn btn-primary">Check the Context in action</button>
-		// 		</Link>
-		// 	</div>
-		// </nav>
 	);
 };
