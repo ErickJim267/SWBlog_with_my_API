@@ -1,18 +1,12 @@
-/* 
-    General Styles
-*/
 body{
     background-image: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg');
 }
-#planetlink{
+#navlink{
     color: white;
 }
-#characterlink{
-    color: white;
-}
-#charactersTitle{
+#mainTitle{
     color: red;
 }
-#planetsTitle{
-    color: red;
+footer p{
+    color: yellow;
 }
