@@ -17,7 +17,10 @@ const injectContext = PassedComponent => {
 			})
 		);
 
-		useEffect(() => {}, []);
+		useEffect(() => {
+			state.actions.fetchPeople();
+			state.actions.fetchPlanets();
+		}, []);
 
 		return (
 			<Context.Provider value={state}>

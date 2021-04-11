@@ -6,14 +6,6 @@ import { Context } from "../store/appContext";
 export const NavbarMenu = () => {
 	const { store, actions } = useContext(Context);
 
-	/*const removePeople(e) {
-    let array = [...this.state.people]; // make a separate copy of the array
-    let index = array.indexOf(e.target.value)
-    if (index !== -1) {
-        array.splice(index, 1);
-        this.setState({people: array});
-    }
-    }*/
 	return (
 		<Navbar>
 			<Navbar.Brand>
@@ -25,20 +17,13 @@ export const NavbarMenu = () => {
 					/>
 				</Link>
 			</Navbar.Brand>
-			<Nav className="mr-auto">
-				<Link className="nav-link" to="/planets">
-					<section id="navlink">Planets</section>
-				</Link>
-				<Link className="nav-link" to="/characters">
-					<section id="navlink">Characters</section>
-				</Link>
-			</Nav>
+			<Nav className="mr-auto" />
 			<DropdownButton id="dropdown-basic-button" title={`Favoritos ${store.favorites.length}`}>
 				{store.favorites.map((item, index) => {
 					return (
 						<Dropdown.Item key={index}>
-							<a>{item}</a>
-							<Button className="fas fa-trash-alt" />
+							{item}
+							<Button className="fas fa-trash-alt" onClick={() => actions.removePeople(index)} />
 						</Dropdown.Item>
 					);
 				})}
