@@ -1,9 +1,9 @@
 import React, { useEffect, useContext } from "react";
-import { Button, Card } from "react-bootstrap";
+//import { Button, Card } from "react-bootstrap";
 import { Context } from "../store/appContext";
 import { useParams } from "react-router-dom";
 
-export const Characters = () => {
+export const Planets = () => {
 	const { planetsid } = useParams();
 	const { store, actions } = useContext(Context);
 
